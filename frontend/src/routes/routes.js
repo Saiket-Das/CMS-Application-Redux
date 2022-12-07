@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import BlogCard from "../components/BlogCard";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
 import Home from "../pages/Main/Home";
@@ -18,7 +19,7 @@ const routes = createBrowserRouter([
       },
       {
         path: "blog",
-        element: <Dashboard />,
+        element: <BlogCard />,
       },
 
       {
@@ -27,7 +28,7 @@ const routes = createBrowserRouter([
         children: [
           {
             path: "/dashboard",
-            element: <Home />,
+            element: <BlogCard />,
           },
           {
             path: "post-blog",
