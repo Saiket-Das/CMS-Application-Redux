@@ -12,15 +12,7 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "about",
-        element: <Home />,
-      },
-      {
-        path: "top-rated",
-        element: <Home />,
-      },
-      {
-        path: "cart",
+        path: "home",
         element: <Home />,
       },
     ],
@@ -34,7 +26,7 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "add-product",
+        path: "post-blog",
         element: <Home />,
       },
     ],
