@@ -17,9 +17,6 @@ const Home = () => {
             <BlogCard />
             <BlogCard />
             <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
           </div>
 
           {/* <div className="flex justify-center">

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const BlogCard = () => {
   return (
     <div>
-      <section className="shadow-xl">
-        <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+      <section className="shadow-xl ">
+        <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 hover:bg-slate-200">
           <Link
-            to="/"
+            to="/blog"
             rel="noopener noreferrer"
             href="#"
-            className="max-w-sm mx-auto group hover:no-underline focus:no-underline"
+            className="max-w-sm mx-auto group "
           >
             <img
               role="presentation"
@@ -19,7 +19,7 @@ const BlogCard = () => {
               alt=""
             />
             <div className="p-6 space-y-2">
-              <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+              <h3 className="text-2xl font-semibold">
                 In usu laoreet repudiare legendos
               </h3>
               <span className="text-xs">January 21, 2021</span>
