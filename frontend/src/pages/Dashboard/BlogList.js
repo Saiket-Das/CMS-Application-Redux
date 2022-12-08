@@ -21,7 +21,7 @@ const BlogList = () => {
                   <td className="p-3">
                     <div className="flex align-items-center">
                       <div className="ml-3">
-                        <div className="font-medium">
+                        <div className="font-medium cursor-pointer hover:underline">
                           How you can get 1M subs
                         </div>
                       </div>
@@ -37,7 +37,7 @@ const BlogList = () => {
                     </Link>
 
                     <i>
-                      <button>Delete</button>
+                      <button className="text-red-500">Delete</button>
                     </i>
                   </td>
                 </tr>
