@@ -4,7 +4,6 @@ const loadContentData = () => {
   return async (dispatch, getState) => {
     const res = await fetch("http://localhost:5000/api/content");
     const data = await res.json();
-    console.log("data", data);
 
     if (data.data.length) {
       dispatch(loadContent(data.data));

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import BlogCard from "../../components/BlogCard";
-import BlogCard2 from "../../components/BlogCard2";
+// import BlogCard2 from "../../components/BlogCard2";
 import loadContentData from "../../redux/thunk/fetchContents";
 
 const Home = () => {
@@ -65,7 +65,7 @@ const Home = () => {
           </button>
         </div>
         <div className="container pt-5 px-10 mx-auto space-y-6 sm:space-y-12">
-          <BlogCard2 />
+          {/* <BlogCard2 /> */}
           <div className=" grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {contentData}
           </div>

@@ -2,7 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ content }) => {
-  const { _id, title, body, image, categories, uploadDate } = content;
+  const { title, body, image, categories, uploadDate } = content;
+
+  const date = new Date(uploadDate);
+
+  const month = date.toLocaleString("default", { month: "long" });
+  var day = date.getDate();
+  var year = date.getFullYear();
+
+  const convertedDate = day + " " + month + " " + year;
 
   return (
     <div>
@@ -22,13 +30,20 @@ const BlogCard = ({ content }) => {
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold">{title}</h3>
-              <span className="text-xs">January 21, 2021</span>
+              <span className="text-xs">{convertedDate}</span>
               <p>{body.slice(0, 150)}</p>
 
-              <div class="flex flex-wrap place-items-center pt-5">
-                {categories.map((category) => (
-                  <button class="p-2 pl-5 pr-5 mr-4 transition-colors duration-700 transform bg-indigo-500  text-gray-100 text-sm rounded-lg ">
+              <div className="flex flex-wrap place-items-center pt-5">
+                {categories.map((category, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    className="relative px-8 py-2 ml-4 overflow-hidden font-semibold rounded bg-indigo-300"
+                  >
                     {category}
+                    <span className="absolute top-0 right-0 px-5 py-1 text-xs tracking-wider text-center uppercase whitespace-no-wrap origin-bottom-left transform rotate-45 -translate-y-full translate-x-1/3 dark:bg-violet-400">
+                      #
+                    </span>
                   </button>
                 ))}
               </div>
