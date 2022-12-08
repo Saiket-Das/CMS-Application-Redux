@@ -1,6 +1,6 @@
 import { loadContent } from "../actions/contentActions";
 
-const loadProductData = () => {
+const loadContentData = () => {
   return async (dispatch, getState) => {
     const res = await fetch("http://localhost:5000/api/content");
     const data = await res.json();
@@ -11,4 +11,4 @@ const loadProductData = () => {
   };
 };
 
-export default loadProductData;
+export default loadContentData;

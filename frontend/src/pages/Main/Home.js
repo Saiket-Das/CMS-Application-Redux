@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import BlogCard from "../../components/BlogCard";
 import BlogCard2 from "../../components/BlogCard2";
+import loadContentData from "../../redux/thunk/fetchContents";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const state = useSelector((state) => state);
+
+  const { contents } = state.content;
+
+  useEffect(() => {
+    dispatch(loadContentData());
+  }, [dispatch]);
+
+  console.log(contents);
+
   return (
     <div>
       <section className="">

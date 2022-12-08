@@ -8,7 +8,7 @@ const initialState = {
   contents: [],
 };
 
-const productReducer = (state = initialState, action) => {
+const contentReducers = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_CONTENT:
       return {
@@ -34,4 +34,4 @@ const productReducer = (state = initialState, action) => {
   }
 };
 
-export default productReducer;
+export default contentReducers;
