@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import BlogCard from "../../components/BlogCard";
+import { toggleCategory, toggleDate } from "../../redux/actions/filterActions";
 // import BlogCard2 from "../../components/BlogCard2";
 import loadContentData from "../../redux/thunk/fetchContents";
 
@@ -17,7 +18,7 @@ const Home = () => {
     dispatch(loadContentData());
   }, [dispatch]);
 
-  console.log(contents);
+  const activeClass = "text-white  bg-indigo-500 border-white";
 
   let contentData;
 
@@ -48,19 +49,44 @@ const Home = () => {
     <div>
       <section className="">
         <div className="mb-10 flex justify-end gap-5 px-10">
-          <button className="border px-5 py-1 rounded-full font-semibold">
+          <button
+            className={`border px-3 py-2 rounded-full font-semibold ${
+              date && activeClass
+            } `}
+            onClick={() => dispatch(toggleDate("Date"))}
+          >
             Date
           </button>
-          <button className="border px-5 py-1 rounded-full font-semibold">
+          <button
+            className={`border px-3 py-2 rounded-full font-semibold  ${
+              categories.includes("Travel") && activeClass
+            }`}
+            onClick={() => dispatch(toggleCategory("Travel"))}
+          >
             Travel
           </button>
-          <button className="border px-5 py-1 rounded-full font-semibold">
+          <button
+            className={`border px-3 py-2 rounded-full font-semibold  ${
+              categories.includes("Food") && activeClass
+            }`}
+            onClick={() => dispatch(toggleCategory("Food"))}
+          >
             Food
           </button>
-          <button className="border px-5 py-1 rounded-full font-semibold">
-            Fashion
+          <button
+            className={`border px-3 py-2 rounded-full font-semibold  ${
+              categories.includes("Tech") && activeClass
+            }`}
+            onClick={() => dispatch(toggleCategory("Tech"))}
+          >
+            Tech
           </button>
-          <button className="border px-5 py-1 rounded-full font-semibold">
+          <button
+            className={`border px-3 py-2 rounded-full font-semibold  ${
+              categories.includes("News") && activeClass
+            }`}
+            onClick={() => dispatch(toggleCategory("News"))}
+          >
             News
           </button>
         </div>
