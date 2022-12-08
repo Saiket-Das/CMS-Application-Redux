@@ -2,36 +2,29 @@
   {
     "title": "Spotify's Year-End Lists Are the Ultimate Personality Test",
     "body": "If you looked at my Spotify Wrapped summary today and concluded, “You spent a lot of 2019 being sad and/or going on long, moody walks with your headphones,” you'd be correct: Apparently, I listened to a lot of folk-pop singer-songwriter Phoebe Bridgers and her indie rock outfit, Better Oblivion Community Center. Today I was one of thousands of Twitter users (based on the hashtag #spotifywrapped2019) to post a screenshot of the streaming service's individualized end-of-year roundup — the condensing of a year's worth of data, showcasing what we pumped into our ears while we worked, commuted, cleaned the apartment, or lay in bed staring at the ceiling.",
+    "image": "https://images.unsplash.com/photo-1643208589896-07b8feb4dffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
     "categories": ["News", "Tech"],
-    "imgUrl": "https://musictech.com/wp-content/uploads/2021/01/spotify-airpods@1400x1050.jpg",
-    "uploadDate": "2022-10-22T17:14:08.181+00:00"
+    "uploadDate": "2022-06-22T17:14:08.181+00:00"
   },
   {
     "title": "Living Root Bridges of Megahalaya.",
     "body": "Back in 2005, during a bout of backpacking in India, I heard about Megahalaya's living root bridges from a fellow traveler I had met in Darjeeling. Although he confessed to never having actually been there himself, he said he had heard from another person that the area called the East Khasi Hills was a fascinating and under-explored place. I clearly remember trying to conjure up an image in my mind of what a 'living root bridge' might look like, but to be honest, the best I could muster was something akin to a log across a small brook, a sight I've seen many times during various jungle treks all over the world.",
+    "image": "https://images.unsplash.com/photo-1602436005724-dd6633726191?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
     "categories": ["Travel"],
-    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eastmojo.com%2Fmeghalaya%2F2022%2F03%2F29%2Fmeghalaya-root-bridges-in-unescos-tentative-list-of-world-heritage-sites%2F&psig=AOvVaw1zot7M4wjzlzC5S-_9aa92&ust=1670586753032000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODN-eL66fsCFQAAAAAdAAAAABAp",
-    "uploadDate": "2022-09-22T17:14:08.181+00:00"
+    "uploadDate": "2022-05-22T17:14:08.181+00:00"
   },
   {
     "title": "How to Make Pinwheel Cookies",
     "body": "Enjoy classic chocolate and vanilla pinwheel cookies using this tried-and-tested homemade recipe. These mesmerizingly beautiful and delightfully soft pinwheel cookies come together by layering and rolling chocolate and vanilla cookie dough together. The best part about these slice-and-bake cookies? You only need to make 1 dough! Follow my in-depth tutorial and video for recipe success. Today's recipe actually uses the same base dough as mint chocolate checkerboard cookies and these neapolitan cookies, but since pinwheels have the tendency to overspread, I add a *touch* more flour. This gives you extra insurance, just in case the dough starts to get a bit sticky.",
+    "image": "https://images.unsplash.com/photo-1622467827417-bbe2237067a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     "categories": ["Food"],
-    "imgUrl": "https://sallysbakingaddiction.com/wp-content/uploads/2022/11/chocolate-vanilla-pinwheel-cookies-2.jpg",
-    "uploadDate": "2022-08-22T17:14:08.181+00:00"
+    "uploadDate": "2022-04-22T17:14:08.181+00:00"
   },
   {
     "title": "WhatsApp starts rolling out 3D avatars",
     "body": "WhatsApp has started rolling out 3D avatars for its users around the globe that can be used as profile photos or custom stickers — months after their debut on Instagram, Facebook and Messenger. On Wednesday, Meta CEO Mark Zuckerberg wrote on Facebook that avatars are coming to WhatsApp. The announcement follows a months-long beta testing that was first reported by WhatsApp beta tracker WABetaInfo in June. In a blog post, WhatsApp said that users could use personalized avatars as their profile photo or choose from one of 36 custom stickers reflecting different emotions and actions. Avatar stickers on WhatsApp look similar to Snap's Bitmoji or Apple's Memoji stickers.",
+    "image": "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     "categories": ["Tech"],
-    "imgUrl": "https://techcrunch.com/wp-content/uploads/2022/12/whatsapp-avatars.jpg?w=1390&crop=1",
-    "uploadDate": "2022-07-22T17:14:08.181+00:00"
-  },
-  {
-    "title": "Binance's bitcoin reserves are fully collateralized according to auditing firm Mazars",
-    "body": "Auditing firm Mazars has released a report about Binance's BTC reserves. The auditing firm has reached the same conclusion as Binance itself. As of November 22 at 23:59 UTC, Binance held enough bitcoins and wrapped bitcoins to cover all users's balances on the exchange. Binance had already launched a proof-of-reserves website nearly two weeks ago to reassure its users following the collapse of FTX. Today's audit just confirms that Binance doesn't appear to be lying, according to Mazars. As always, there are some limitations with these proof-of-reserves exercises. The biggest caveat is that Binance is only focusing on BTC assets for now.",
-    "categories": ["News", "Tech"],
-    "imgUrl": "https://techcrunch.com/wp-content/uploads/2022/11/GettyImages-1244424369.jpg?w=1390&crop=1",
-    "uploadDate": "2022-06-22T17:14:08.181+00:00"
+    "uploadDate": "2022-04-22T17:14:08.181+00:00"
   }
 ]

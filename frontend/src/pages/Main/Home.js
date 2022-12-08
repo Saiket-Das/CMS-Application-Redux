@@ -11,12 +11,38 @@ const Home = () => {
   const state = useSelector((state) => state);
 
   const { contents } = state.content;
+  const { date, categories } = state.filter.filters;
 
   useEffect(() => {
     dispatch(loadContentData());
   }, [dispatch]);
 
   console.log(contents);
+
+  let contentData;
+
+  if (contents.length) {
+    contentData = contents.map((content) => (
+      <BlogCard key={content._id} content={content} />
+    ));
+  }
+
+  if (contents.length && (date || categories.length)) {
+    contentData = contents
+      .filter((content) => {
+        if (date) {
+          return content.status === true;
+        }
+        return content;
+      })
+      .filter((content) => {
+        if (categories.length) {
+          return categories.includes(content.brand);
+        }
+        return content;
+      })
+      .map((content) => <BlogCard key={content._id} content={content} />);
+  }
 
   return (
     <div>
@@ -41,13 +67,7 @@ const Home = () => {
         <div className="container pt-5 px-10 mx-auto space-y-6 sm:space-y-12">
           <BlogCard2 />
           <div className=" grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
+            {contentData}
           </div>
 
           {/* <div className="flex justify-center">
