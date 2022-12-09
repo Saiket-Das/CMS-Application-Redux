@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import loadContentData from "../../redux/thunk/fetchContents";
 
 const BlogList = () => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state);
+
+  const { contents } = state.content;
+
+  useEffect(() => {
+    dispatch(loadContentData());
+  }, [dispatch]);
+
   return (
     <div>
       <div className="flex flex-col justify-center items-center h-full w-full ">
@@ -16,32 +27,34 @@ const BlogList = () => {
                   <th className="p-3 text-left">Action</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr className="bg-indigo-100">
-                  <td className="p-3">
-                    <div className="flex align-items-center">
-                      <div className="ml-3">
-                        <div className="font-medium cursor-pointer hover:underline">
-                          How you can get 1M subs
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="p-3">Technology</td>
-                  <td className="p-3">11 Dec 2022</td>
-                  <td className="p-3 flex">
-                    <Link to="/" href="#" className="mx-2">
-                      <i>
-                        <button>Edit</button>
-                      </i>
-                    </Link>
+              {contents.map((content) => (
+                <tbody>
+                  <tr className="bg-indigo-100">
+                    <td className="p-3">
+                      <p className="font-medium cursor-pointer hover:underline">
+                        {content.title}
+                      </p>
+                    </td>
+                    <td className="p-3">
+                      {content.cetagory.map((ceta) => (
+                        <span className="mr-2">#{ceta}</span>
+                      ))}
+                    </td>
+                    <td className="p-3">11 Dec 2022</td>
+                    <td className="p-3 flex">
+                      <Link to="/" href="#" className="mx-2">
+                        <i>
+                          <button>Edit</button>
+                        </i>
+                      </Link>
 
-                    <i>
-                      <button className="text-red-500">Delete</button>
-                    </i>
-                  </td>
-                </tr>
-              </tbody>
+                      <i>
+                        <button className="text-red-500">Delete</button>
+                      </i>
+                    </td>
+                  </tr>
+                </tbody>
+              ))}
             </table>
           </div>
         </div>

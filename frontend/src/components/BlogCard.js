@@ -6,9 +6,9 @@ const BlogCard = ({ content }) => {
 
   const date = new Date(uploadDate);
 
+  const day = date.getDate();
   const month = date.toLocaleString("default", { month: "long" });
-  var day = date.getDate();
-  var year = date.getFullYear();
+  const year = date.getFullYear();
 
   const convertedDate = day + " " + month + " " + year;
 
