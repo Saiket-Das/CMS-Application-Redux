@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ content }) => {
-  const { title, body, image, categories, uploadDate } = content;
+  const { title, body, image, cetagory, uploadDate } = content;
 
   const date = new Date(uploadDate);
 
@@ -34,7 +34,7 @@ const BlogCard = ({ content }) => {
               <p>{body.slice(0, 150)}</p>
 
               <div className="flex flex-wrap place-items-center pt-5">
-                {categories.map((category, index) => (
+                {cetagory.map((category, index) => (
                   <button
                     key={index}
                     type="button"

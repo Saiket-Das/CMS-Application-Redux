@@ -8,11 +8,10 @@ import loadContentData from "../../redux/thunk/fetchContents";
 
 const Home = () => {
   const dispatch = useDispatch();
-
   const state = useSelector((state) => state);
 
   const { contents } = state.content;
-  const { date, categories } = state.filter.filters;
+  const { date, cetagories } = state.filter.filters;
 
   useEffect(() => {
     dispatch(loadContentData());
@@ -28,20 +27,32 @@ const Home = () => {
     ));
   }
 
-  if (contents.length && (date || categories.length)) {
+  if (contents.length && (date || cetagories.length)) {
     contentData = contents
       .filter((content) => {
         if (date) {
-          return content.status === true;
+          return contents
+            .reverse()
+            .slice(content.length, 0)
+            .reverse()
+            .map((content, index) => (
+              <BlogCard key={index} content={content} />
+            ));
         }
         return content;
       })
       .filter((content) => {
-        if (categories.length) {
-          return categories.includes(content.brand);
+        if (cetagories.length) {
+          const value = content.cetagory.filter((ceta) =>
+            cetagories.includes(ceta)
+          );
+          return cetagories.includes(value[0]);
+
+          // return console.log("TureFalse --->", cetagories.includes(value));
         }
         return content;
       })
+
       .map((content) => <BlogCard key={content._id} content={content} />);
   }
 
@@ -59,7 +70,7 @@ const Home = () => {
           </button>
           <button
             className={`border px-3 py-2 rounded-full font-semibold  ${
-              categories.includes("Travel") && activeClass
+              cetagories.includes("Travel") && activeClass
             }`}
             onClick={() => dispatch(toggleCategory("Travel"))}
           >
@@ -67,7 +78,7 @@ const Home = () => {
           </button>
           <button
             className={`border px-3 py-2 rounded-full font-semibold  ${
-              categories.includes("Food") && activeClass
+              cetagories.includes("Food") && activeClass
             }`}
             onClick={() => dispatch(toggleCategory("Food"))}
           >
@@ -75,7 +86,7 @@ const Home = () => {
           </button>
           <button
             className={`border px-3 py-2 rounded-full font-semibold  ${
-              categories.includes("Tech") && activeClass
+              cetagories.includes("Tech") && activeClass
             }`}
             onClick={() => dispatch(toggleCategory("Tech"))}
           >
@@ -83,7 +94,7 @@ const Home = () => {
           </button>
           <button
             className={`border px-3 py-2 rounded-full font-semibold  ${
-              categories.includes("News") && activeClass
+              cetagories.includes("News") && activeClass
             }`}
             onClick={() => dispatch(toggleCategory("News"))}
           >
@@ -111,3 +122,20 @@ const Home = () => {
 };
 
 export default Home;
+
+// content.cetagory.map((ceta) => ceta.values().next().value)
+//
+
+// console.log(
+//   "Includes",
+//   cetagories.includes(
+//     console.log(
+//       "Values",
+//       content.cetagory
+//         // .values()
+//         .map((ceta) =>
+//           console.log("Value ceta", cetagories.includes(ceta))
+//         )
+//     )
+//   )
+// );

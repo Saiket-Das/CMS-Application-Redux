@@ -2,7 +2,7 @@ import { TOGGLE_CATEGORY, TOGGLE_DATE } from "../actionTypes/actionTypes";
 
 export const initialState = {
   filters: {
-    categories: [],
+    cetagories: [],
     date: false,
   },
   keyword: "",
@@ -11,12 +11,12 @@ export const initialState = {
 const filterReducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_CATEGORY: {
-      if (state.filters.categories.includes(action.payload)) {
+      if (state.filters.cetagories.includes(action.payload)) {
         return {
           ...state,
           filters: {
             ...state.filters,
-            categories: state.filters.categories.filter(
+            cetagories: state.filters.cetagories.filter(
               (category) => category !== action.payload
             ),
           },
@@ -26,7 +26,7 @@ const filterReducer = (state = initialState, action) => {
         ...state,
         filters: {
           ...state.filters,
-          categories: [...state.filters.categories, action.payload],
+          cetagories: [...state.filters.cetagories, action.payload],
         },
       };
     }
