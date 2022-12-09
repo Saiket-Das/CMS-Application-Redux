@@ -47,8 +47,6 @@ const Home = () => {
             cetagories.includes(ceta)
           );
           return cetagories.includes(value[0]);
-
-          // return console.log("TureFalse --->", cetagories.includes(value));
         }
         return content;
       })
@@ -122,20 +120,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// content.cetagory.map((ceta) => ceta.values().next().value)
-//
-
-// console.log(
-//   "Includes",
-//   cetagories.includes(
-//     console.log(
-//       "Values",
-//       content.cetagory
-//         // .values()
-//         .map((ceta) =>
-//           console.log("Value ceta", cetagories.includes(ceta))
-//         )
-//     )
-//   )
-// );
