@@ -28,7 +28,7 @@ const BlogList = () => {
                 </tr>
               </thead>
               {contents.map((content) => (
-                <tbody>
+                <tbody key={content._id}>
                   <tr className="bg-indigo-100">
                     <td className="p-3">
                       <p className="font-medium cursor-pointer hover:underline">
@@ -36,8 +36,10 @@ const BlogList = () => {
                       </p>
                     </td>
                     <td className="p-3">
-                      {content.cetagory.map((ceta) => (
-                        <span className="mr-2">#{ceta}</span>
+                      {content.cetagory.map((ceta, index) => (
+                        <span key={index} className="mr-2">
+                          #{ceta}
+                        </span>
                       ))}
                     </td>
                     <td className="p-3">11 Dec 2022</td>
