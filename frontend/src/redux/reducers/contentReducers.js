@@ -1,5 +1,5 @@
 import {
-  ADD_CONTENT,
+  POST_CONTENT,
   DELETE_CONTENT,
   LOAD_CONTENT,
 } from "../actionTypes/actionTypes";
@@ -16,7 +16,7 @@ const contentReducers = (state = initialState, action) => {
         contents: action.payload,
       };
 
-    case ADD_CONTENT:
+    case POST_CONTENT:
       return {
         ...state,
         contents: [...state.contents, action.payload],
