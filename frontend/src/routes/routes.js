@@ -3,8 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main/Main";
 import Home from "../pages/Main/Home";
 import Blog from "../pages/Main/Blog";
-import BlogList from "../pages/Dashboard/BlogList";
+
 import Dashboard from "../layout/Dashboard/Dashboard";
+import ContentList from "../pages/Dashboard/ContentList";
+import PostContent from "../pages/Dashboard/PostContent";
 
 const routes = createBrowserRouter([
   {
@@ -30,11 +32,11 @@ const routes = createBrowserRouter([
         children: [
           {
             path: "/dashboard",
-            element: <BlogList />,
+            element: <ContentList />,
           },
           {
-            path: "post-blog",
-            element: <Home />,
+            path: "post-content",
+            element: <PostContent />,
           },
         ],
       },

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import loadContentData from "../../redux/thunk/fetchContents";
 
-const BlogList = () => {
+const ContentList = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
@@ -65,4 +65,4 @@ const BlogList = () => {
   );
 };
 
-export default BlogList;
+export default ContentList;

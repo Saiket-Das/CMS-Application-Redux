@@ -10,11 +10,11 @@ const Sidebar = () => {
       <ul className="flex gap-3  flex-col h-full">
         <li className="flex items-center mb-2">
           <AiOutlineUnorderedList className="mr-2" />
-          <Link to="/dashboard">Blog List</Link>
+          <Link to="/dashboard">Content List</Link>
         </li>
         <li className="flex items-center">
           <GrAdd className="mr-2" />
-          <Link to="post-blog">Post Blog</Link>
+          <Link to="post-content">Post Content</Link>
         </li>
         <li className="flex items-center mt-auto">
           <IoIosArrowBack className="mr-2" />
