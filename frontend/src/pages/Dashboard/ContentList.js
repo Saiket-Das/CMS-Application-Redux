@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import deleteProductById from "../../redux/thunk/deleteContent";
 import loadContentData from "../../redux/thunk/fetchContents";
 
 const ContentList = () => {
@@ -51,7 +52,14 @@ const ContentList = () => {
                       </Link>
 
                       <i>
-                        <button className="text-red-500">Delete</button>
+                        <button
+                          className="text-red-500"
+                          onClick={() =>
+                            dispatch(deleteProductById(content._id))
+                          }
+                        >
+                          Delete
+                        </button>
                       </i>
                     </td>
                   </tr>
