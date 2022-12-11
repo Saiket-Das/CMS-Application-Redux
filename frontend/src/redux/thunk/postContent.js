@@ -2,7 +2,7 @@ import { postContent } from "../actions/contentActions";
 
 const postContentData = (content) => {
   return async (dispatch, getState) => {
-    const res = await fetch("http://localhost:5000/api/product", {
+    const res = await fetch("http://localhost:5000/api/content", {
       method: "POST",
       body: JSON.stringify(content),
       headers: {
@@ -12,6 +12,7 @@ const postContentData = (content) => {
     const data = await res.json();
 
     if (data.acknowledged) {
+      console.log(data.acknowledged);
       dispatch(postContent({ _id: data.insertedId, ...content }));
     }
   };

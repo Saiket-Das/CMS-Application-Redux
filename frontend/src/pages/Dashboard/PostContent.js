@@ -1,20 +1,34 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import postContentData from "../../redux/thunk/postContent";
 
 const PostContent = () => {
   const { register, handleSubmit } = useForm();
 
+  const dispatch = useDispatch();
+
   const submit = (data) => {
+    let cetagories = [];
+
+    if (data.hastag1) cetagories.push(data.hastag1);
+
+    if (data.hastag2) cetagories.push(data.hastag2);
+
+    if (data.hastag3) cetagories.push(data.hastag3);
+
+    if (data.hastag4) cetagories.push(data.hastag4);
+
     const content = {
       title: data.title,
       image: data.image,
       body: data.body,
-      cetagory: [data.hastag1, data.hastag2, data.hastag3, data.hastag4],
+      cetagory: cetagories,
       uploadDate: Date.now(),
     };
+    // console.log(content);
 
-    console.log(content);
+    dispatch(postContentData(content));
   };
 
   return (
@@ -60,6 +74,7 @@ const PostContent = () => {
             name="body"
             className="block p-2.5 w-full text-sm "
             placeholder="Write your thoughts here..."
+            {...register("body")}
           />
         </div>
 
