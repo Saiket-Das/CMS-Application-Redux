@@ -42,10 +42,11 @@ const run = async () => {
       const updatedContent = req.body;
       console.log(updatedContent);
 
-      const result = await productCollection.findByIdAndUpdate(
+      const result = await productCollection.updateOne(
         { _id: ObjectId(id) },
         updatedContent
       );
+      console.log(result);
       res.send(result);
     });
 

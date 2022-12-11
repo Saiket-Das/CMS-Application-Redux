@@ -13,9 +13,12 @@ const EditContent = () => {
 
   const submit = (data) => {
     const updatedContent = {
-      title: data.title,
-      image: data.image,
-      body: data.body,
+      //   title: data.title,
+      //   image: data.image,
+      //   body: data.body,
+      ...(data.title && { title: data.title }),
+      ...(data.image && { image: data.image }),
+      ...(data.body && { title: data.body }),
     };
     dispatch(updateContentData(updatedContent, id));
   };

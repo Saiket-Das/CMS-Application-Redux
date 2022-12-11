@@ -6,10 +6,10 @@ const updateContentData = (content, contentId) => {
   return async (dispatch, getState) => {
     const res = await fetch(`http://localhost:5000/api/content/${contentId}`, {
       method: "PATCH",
-      body: JSON.stringify(content),
       headers: {
         "Content-type": "application/json",
       },
+      body: JSON.stringify(content),
     });
     const data = await res.json();
 

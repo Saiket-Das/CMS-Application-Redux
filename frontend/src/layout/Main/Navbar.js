@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CustomLink from "../../components/CustomLink";
 
 const Navbar = () => {
   return (
     <nav className="">
       <div className="px-4 py-4 mb-4">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <Link
-            href="https://cdn-icons-png.flaticon.com/512/1/1905.png"
-            className="flex items-center"
-          >
+          <Link to="/" className="flex items-center">
             <img
               src="https://cdn-icons-png.flaticon.com/512/1/1905.png"
               className="mr-3 h-6 sm:h-9"
@@ -20,12 +18,12 @@ const Navbar = () => {
             </span>
           </Link>
           <div className="flex items-center lg:order-2">
-            <Link
+            <CustomLink
               to="/"
               className="font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
             >
               SIGN IN
-            </Link>
+            </CustomLink>
 
             <button
               data-collapse-toggle="mobile-menu-2"
@@ -68,21 +66,21 @@ const Navbar = () => {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <Link
+                <CustomLink
                   to="/"
                   className="block py-2 pr-4 pl- rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 "
                   aria-current="page"
                 >
                   Home
-                </Link>
+                </CustomLink>
               </li>
               <li>
-                <Link
+                <CustomLink
                   to="/dashboard"
                   className="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0"
                 >
                   Dashboard
-                </Link>
+                </CustomLink>
               </li>
             </ul>
           </div>
