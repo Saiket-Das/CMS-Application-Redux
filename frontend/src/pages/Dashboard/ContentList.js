@@ -45,9 +45,15 @@ const ContentList = () => {
                     </td>
                     <td className="p-3">11 Dec 2022</td>
                     <td className="p-3 flex">
-                      <Link to="/" href="#" className="mx-2">
+                      <Link
+                        to={`/dashboard/edit-content/${content._id}`}
+                        href="#"
+                        className="mx-2"
+                      >
                         <i>
-                          <button>Edit</button>
+                          <button className="hover:underline hover:text-indigo-700">
+                            Edit
+                          </button>
                         </i>
                       </Link>
 

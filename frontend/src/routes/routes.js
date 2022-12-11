@@ -7,6 +7,7 @@ import Blog from "../pages/Main/Blog";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import ContentList from "../pages/Dashboard/ContentList";
 import PostContent from "../pages/Dashboard/PostContent";
+import EditContent from "../pages/Dashboard/EditContent";
 
 const routes = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const routes = createBrowserRouter([
           {
             path: "post-content",
             element: <PostContent />,
+          },
+
+          {
+            path: "edit-content/:id",
+            element: <EditContent />,
           },
         ],
       },
