@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import updateContentData from "../../redux/thunk/editContent";
 
 const EditContent = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const EditContent = () => {
       image: data.image,
       body: data.body,
     };
-    console.log(updatedContent);
+    dispatch(updateContentData(updatedContent, id));
   };
 
   return (

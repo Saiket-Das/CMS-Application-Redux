@@ -2,6 +2,7 @@ import {
   POST_CONTENT,
   DELETE_CONTENT,
   LOAD_CONTENT,
+  UPDATE_CONTENT,
 } from "../actionTypes/actionTypes";
 
 const initialState = {
@@ -21,6 +22,13 @@ const contentReducers = (state = initialState, action) => {
         ...state,
         contents: [...state.contents, action.payload],
       };
+
+    case UPDATE_CONTENT:
+      return {
+        ...state,
+        contents: [...state.contents, action.payload],
+      };
+
     case DELETE_CONTENT:
       return {
         ...state,

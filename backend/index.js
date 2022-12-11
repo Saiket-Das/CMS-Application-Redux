@@ -36,6 +36,19 @@ const run = async () => {
       res.send(result);
     });
 
+    app.patch("/api/content/:id", async (req, res) => {
+      const id = req.params.id;
+
+      const updatedContent = req.body;
+      console.log(updatedContent);
+
+      const result = await productCollection.findByIdAndUpdate(
+        { _id: ObjectId(id) },
+        updatedContent
+      );
+      res.send(result);
+    });
+
     app.delete("/api/content/:id", async (req, res) => {
       const id = req.params.id;
 
