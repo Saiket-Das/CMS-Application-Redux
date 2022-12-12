@@ -29,18 +29,7 @@ const Home = () => {
 
   if (contents.length && (date || cetagories.length)) {
     contentData = contents
-      .filter((content) => {
-        if (date) {
-          return contents
-            .reverse()
-            .slice(content.length, 0)
-            .reverse()
-            .map((content, index) => (
-              <BlogCard key={index} content={content} />
-            ));
-        }
-        return content;
-      })
+
       .filter((content) => {
         if (cetagories.length) {
           const value = content.cetagory.filter((ceta) =>
@@ -53,6 +42,14 @@ const Home = () => {
 
       .map((content) => <BlogCard key={content._id} content={content} />);
   }
+  if (date) {
+    contentData = contents
+      .slice(0)
+      .reverse()
+      .map((content) => <BlogCard key={content._id} content={content} />);
+  }
+
+  console.log(contentData);
 
   return (
     <div>

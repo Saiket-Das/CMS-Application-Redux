@@ -18,11 +18,10 @@ const Navbar = () => {
             </span> */}
           </Link>
           <div className="flex items-center lg:order-2">
-            <CustomLink
-              to="/"
-              className="font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2"
-            >
-              SIGN IN
+            <CustomLink to="/login">
+              <span className="font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+                LOGIN
+              </span>
             </CustomLink>
 
             <button

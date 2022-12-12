@@ -1,20 +1,20 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Provider } from "react-redux";
 
-import Lottie from "lottie-react";
+// import Lottie from "lottie-react";
 
 import { RouterProvider } from "react-router-dom";
 import store from "./redux/store";
 import routes from "./routes/routes";
 
-import logoLoading from "./assets/lottie/logo-loading.json";
+// import logoLoading from "./assets/lottie/logo-loading.json";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
-  setTimeout(function () {
-    setLoading(true);
-  }, 3000);
+  // setTimeout(function () {
+  //   setLoading(true);
+  // }, 3000);
 
   return (
     <>
