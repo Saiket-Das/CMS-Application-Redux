@@ -29,7 +29,6 @@ const Home = () => {
 
   if (contents.length && (date || cetagories.length)) {
     contentData = contents
-
       .filter((content) => {
         if (cetagories.length) {
           const value = content.cetagory.filter((ceta) =>
@@ -41,12 +40,13 @@ const Home = () => {
       })
 
       .map((content) => <BlogCard key={content._id} content={content} />);
-  }
-  if (date) {
-    contentData = contents
-      .slice(0)
-      .reverse()
-      .map((content) => <BlogCard key={content._id} content={content} />);
+
+    if (date) {
+      contentData = contents
+        .slice(0)
+        .reverse()
+        .map((content) => <BlogCard key={content._id} content={content} />);
+    }
   }
 
   console.log(contentData);
@@ -61,7 +61,7 @@ const Home = () => {
             } `}
             onClick={() => dispatch(toggleDate("Date"))}
           >
-            Date
+            {date ? "First upload" : "Last upload"}
           </button>
           <button
             className={`border px-3 py-2 rounded-full font-semibold  ${
@@ -117,3 +117,10 @@ const Home = () => {
 };
 
 export default Home;
+
+// if (date){
+//   contents
+//   .slice(0)
+//   .reverse()
+//   .map((content) => <BlogCard key={content._id} content={content} />)
+// }
