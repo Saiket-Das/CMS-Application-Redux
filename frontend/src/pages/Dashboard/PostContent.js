@@ -83,6 +83,7 @@ const PostContent = () => {
             Cetagory 1
           </label>
           <input
+            placeholder="Type content cetagory"
             className="text-sm h-12"
             type="text"
             name="hastag1"
@@ -95,6 +96,7 @@ const PostContent = () => {
             Cetagory 2
           </label>
           <input
+            placeholder="Type content cetagory"
             className="text-sm h-12"
             type="text"
             name="hastag2"
@@ -108,6 +110,7 @@ const PostContent = () => {
             Cetagory 3
           </label>
           <input
+            placeholder="Type content cetagory"
             className="text-sm h-12"
             type="text"
             name="hastag3"
@@ -121,6 +124,7 @@ const PostContent = () => {
             Cetagory 4
           </label>
           <input
+            placeholder="Type content cetagory"
             className="text-sm h-12"
             type="text"
             name="hastag4"
